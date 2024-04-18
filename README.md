@@ -21,4 +21,5 @@
 | `GOOGLE_SECRET`      | Your Google Client Secret |
 | `NEXTAUTH_SECRET`    | Your NextAuth Secret |
 
+### Learn More About NextAuth and How to aquire github and google id/secret
 [![NextAuth Tutorial](http://img.youtube.com/vi/MNm1XhDjX1s/0.jpg)](http://www.youtube.com/watch?v=MNm1XhDjX1s "NextAuth Tutorial")
