@@ -5,6 +5,7 @@
 - [ ] Creating Home page 
 - [ ] Creating Blogs page
 - [ ] Creating Blog Component
+- [ ] Adding Loaders and sonner
 - [x] Database Connection
 - [ ] Backend routes
 - [ ] Input Validation
