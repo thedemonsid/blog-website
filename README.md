@@ -1,1 +1,12 @@
 ## Blog Website
+- [x] Nextjs & shadcn setup
+- [ ] github Setup
+- [ ] Deploying the website
+- [ ] Creating Home page 
+- [ ] Creating Blogs page
+- [ ] Creating Blog Component
+- [ ] Database Connection
+- [ ] Backend routes
+- [ ] Input Validation
+- [ ] Authentication
+- [ ] Aesthetics
