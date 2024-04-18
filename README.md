@@ -1,7 +1,7 @@
 ## Blog Website
 - [x] Nextjs & shadcn setup
-- [ ] github Setup
-- [ ] Deploying the website
+- [x] github Setup
+- [x] Deploying the website
 - [ ] Creating Home page 
 - [ ] Creating Blogs page
 - [ ] Creating Blog Component
