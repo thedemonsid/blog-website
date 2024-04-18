@@ -2,7 +2,7 @@
 - [x] Nextjs & shadcn setup
 - [x] github Setup
 - [x] Deploying the website
-- [ ] Creating Home page 
+- [] Creating Home page 
 - [ ] Creating Blogs page
 - [ ] Creating Blog Component
 - [ ] Database Connection
