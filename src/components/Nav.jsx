@@ -1,8 +1,18 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { signIn, signOut, useSession } from "next-auth/react";
 export default function Nav() {
+  const { data: session } = useSession();
+
+  const handleSignInClick = () => {
+    signIn();
+  };
+  const handleSignOutClick = () => {
+    signOut();
+  };
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 bg-white shadow-sm dark:bg-gray-950/90">
+    <nav className=" bg-white shadow-sm dark:bg-gray-950/90">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-14 items-center">
           <Link className="flex items-center" href="/">
@@ -36,7 +46,15 @@ export default function Nav() {
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button size="sm">Sign In</Button>
+            {session ? (
+              <Button size="sm" onClick={handleSignOutClick}>
+                Sign Out
+              </Button>
+            ) : (
+              <Button size="sm" onClick={handleSignInClick}>
+                Sign In
+              </Button>
+            )}
           </div>
         </div>
       </div>
