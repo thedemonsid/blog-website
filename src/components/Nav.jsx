@@ -12,34 +12,34 @@ export default function Nav() {
     signOut();
   };
   return (
-    <nav className=" bg-white shadow-sm dark:bg-gray-950/90">
-      <div className="w-full max-w-7xl mx-auto px-4">
-        <div className="flex justify-between h-14 items-center">
+    <nav className="bg-white shadow-sm dark:bg-gray-950/90">
+      <div className="w-full px-4 mx-auto max-w-7xl">
+        <div className="flex items-center justify-between h-14">
           <Link className="flex items-center" href="/">
-            <MountainIcon className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+            <MountainIcon className="w-6 h-6" />
+            <span className="sr-only">Hello sir</span>
           </Link>
-          <nav className="hidden md:flex gap-4">
+          <nav className="hidden gap-4 md:flex">
             <Link
-              className="font-medium flex items-center text-sm transition-colors hover:underline"
+              className="flex items-center text-sm font-medium transition-colors hover:underline"
               href="/"
             >
               Home
             </Link>
             <Link
-              className="font-medium flex items-center text-sm transition-colors hover:underline"
+              className="flex items-center text-sm font-medium transition-colors hover:underline"
               href="/about"
             >
               About
             </Link>
             <Link
-              className="font-medium flex items-center text-sm transition-colors hover:underline"
+              className="flex items-center text-sm font-medium transition-colors hover:underline"
               href="/blogs"
             >
               Blogs
             </Link>
             <Link
-              className="font-medium flex items-center text-sm transition-colors hover:underline"
+              className="flex items-center text-sm font-medium transition-colors hover:underline"
               href="/create"
             >
               Create Blog

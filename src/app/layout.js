@@ -8,9 +8,9 @@ import Provider from "@/components/providers";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="dark">
         <Provider>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4s" >
             <Nav></Nav>
             <div>{children}</div>
           </div>
