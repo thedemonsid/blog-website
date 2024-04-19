@@ -2,6 +2,7 @@
 - [x] Nextjs & shadcn setup
 - [x] github Setup
 - [x] Deploying the website
+- [ ] Adding PR Template
 - [ ] Creating Home page 
 - [ ] Creating Blogs page
 - [ ] Creating Blog Component
