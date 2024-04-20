@@ -12,12 +12,11 @@ export default function Nav() {
     signOut();
   };
   return (
-    <nav className="bg-white shadow-sm dark:bg-gray-950/90">
+    <nav className="bg-white shadow-sm dark:bg-gray-950/90 font-retro">
       <div className="w-full px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-14">
           <Link className="flex items-center" href="/">
-            <MountainIcon className="w-6 h-6" />
-            <span className="sr-only">Hello sir</span>
+          <h1 className="text-3xl"> Vdsidously</h1>
           </Link>
           <nav className="hidden gap-4 md:flex">
             <Link

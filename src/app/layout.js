@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import Nav from "@/components/Nav";
 export const metadata = {
@@ -8,11 +9,12 @@ import Provider from "@/components/providers";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="dark">
+      <body className="">
         <Provider>
           <div className="flex flex-col gap-4s" >
             <Nav></Nav>
             <div>{children}</div>
+            <Footer></Footer>
           </div>
         </Provider>
       </body>

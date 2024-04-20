@@ -73,7 +73,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily:{
-      retro:['VT323','monospace']
+      retro:['VT323','monospace'],
+      cool: ['Milonga','monospace']
+      
       }
     },
   },
