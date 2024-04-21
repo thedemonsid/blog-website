@@ -74,7 +74,10 @@ module.exports = {
       },
       fontFamily:{
       retro:['VT323','monospace'],
-      cool: ['Milonga','monospace']
+      cool: ['Milonga','monospace'],
+      techy: ['SpaceGrotesk','monospace'],
+      padvoka :['Padvoka','serif'],
+
       
       }
     },
