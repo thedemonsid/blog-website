@@ -8,13 +8,13 @@ const About = () => {
         <div className="p-4 text-yellow-300 bg-gray-800 border-2 border-orange-200 rounded-md shadow-md shadow-gray-300">
           <h2 className="mb-4 text-2xl">Why Vdsidously :</h2>
           <p>
-            We are childhood friends from a town in Maharashtra. It's been since
+            We are childhood friends from a town in Maharashtra. It&apos;s been since
             almost childhood that we love to explore the subject in our hands.
             Life took turns and sways, and after finishing our secondary and
             higher secondary educations, we landed in the same subject for our
             degrees, CSE! Now we began to explore the subject and soon realized
-            that there's seriously a major missing in people passionately
-            expressing what they learn. This blog wasn't in plan even after
+            that there&apos;s seriously a major missing in people passionately
+            expressing what they learn. This blog wasn&apos;t in plan even after
             that. But one day, I was watching a{" "}
             <span className="hover:text-red-400">
               <a
@@ -27,8 +27,8 @@ const About = () => {
             video where he was reacting to some problems with HTML or something.
             So I called up Siddhesh and asked him if we could write about some
             interesting stuff and share it with the people who not just love the
-            money but also the underlying stuff that enables it. That's how we
-            landed here. There's so much more to the code than just mere syntax,
+            money but also the underlying stuff that enables it. That&apos;s how we
+            landed here. There&apos;s so much more to the code than just mere syntax,
             and the real fun in it lies right there! We want to explore and
             share that through this site.
           </p>
@@ -40,7 +40,7 @@ const About = () => {
             <li>Understandable language</li>
             <li>Concise guides to interesting projects</li>
             <li>Weekend project ideas</li>
-            <li>Tools to make your PC's look and feel better</li>
+            <li>Tools to make your PC&apos;s look and feel better</li>
             <li>Things to make your code cleaner</li>
           </ol>
         </div>

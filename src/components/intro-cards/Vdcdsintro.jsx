@@ -1,6 +1,6 @@
-import vdcdsimg from '@/app/images/the_demon_sid1.png';
-import Image from 'next/image';
-import React from 'react'
+import vdcdsimg from "@/app/images/the_demon_sid1.png";
+import Image from "next/image";
+import React from "react"
 
 function Vdcdsintro() {
   return (
@@ -16,7 +16,7 @@ function Vdcdsintro() {
   Just another primate poking around the tangled web. 4 years deep in the code mines and those
   rabbit holes still get me sometimes. stack-wise,MERN is my usual haunt with twist of Next.Js
   around. I also love to linger in android devlopment and Linux coustamziations.{" "}
-  <i> I do know git enough to not stumble around! </i> <b>The sun and I aren't on speaking terms.</b>
+  <i> I do know git enough to not stumble around! </i> <b>The sun and I aren&apos;t on speaking terms.</b>
 </p>
 </div>
   )

@@ -24,6 +24,7 @@ function Projectshowcase() {
           src={cornerpiece}
           width={50}
           height={50}
+          alt="A corner piece image"
         />
       </div>
   )
