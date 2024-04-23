@@ -94,7 +94,7 @@ const About = () => {
                 Asus Vivobook K14 OLED (Vdcds)
               </a>
             </li>
-            <li>Favorite editor: VS Code</li>
+            <li>The editor: VS Code</li>
             <li>
               Softwares you should use more:{" "}
               <span className="font-bold">Postman (The_demon_sid)</span> and{" "}
