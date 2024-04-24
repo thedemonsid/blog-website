@@ -14,6 +14,7 @@
 - [x] Authentication
 - [ ] Aesthetics
 
+
 ## Contributing to the Project
 1. **Fork the Repository**: Start by forking the repository to your own GitHub account.
 
