@@ -38,4 +38,4 @@ try {
   Blog = mongoose.model("Blog", blogSchema);
 }
 
-module.exports = Blog;
+export default Blog;
