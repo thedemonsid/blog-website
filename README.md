@@ -2,16 +2,18 @@
 - [x] Nextjs & shadcn setup
 - [x] github Setup
 - [x] Deploying the website
-- [ ] Adding PR Template
+- [x] Adding PR Template
 - [ ] Creating Home page 
 - [ ] Creating Blogs page
 - [ ] Creating Blog Component
 - [ ] Adding Loaders and sonner
 - [x] Database Connection
-- [ ] Backend routes
+- [x] Backend routes(Basics)
+- [ ] Backend routes(Advanced)
 - [ ] Input Validation
 - [x] Authentication
 - [ ] Aesthetics
+
 
 ## Contributing to the Project
 1. **Fork the Repository**: Start by forking the repository to your own GitHub account.
