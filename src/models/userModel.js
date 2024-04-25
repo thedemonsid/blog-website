@@ -8,12 +8,15 @@ const userSchema = new mongoose.Schema(
     email: {
       type: String,
     },
-    blogs: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Blog",
-      },
-    ],
+    blogs: {
+      type: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Blog",
+        },
+      ],
+      default: [],
+    },
   },
   { timestamps: true }
 );
