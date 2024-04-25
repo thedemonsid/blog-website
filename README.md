@@ -9,6 +9,7 @@
 - [ ] Adding Loaders and sonner
 - [x] Database Connection
 - [x] Backend routes(Basics)
+- [x] Helper functions(fetch,delete,update)
 - [ ] Backend routes(Advanced)
 - [ ] Input Validation
 - [x] Authentication
