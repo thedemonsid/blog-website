@@ -64,7 +64,7 @@ const Blog = () => {
     };
 
     fetchBlogData();
-  }, []);
+  }, [router]);
 
   if (!blogs) {
     return <Loading></Loading>;
