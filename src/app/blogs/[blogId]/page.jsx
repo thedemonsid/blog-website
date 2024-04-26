@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchBlogs } from "@/helpers/fetchData";
 import { useRouter } from "next/navigation";
+import Loading from "@/app/loading";
 const Post = ({ params }) => {
   const router = useRouter();
   const [blog, setBlog] = useState(null);
@@ -21,7 +22,7 @@ const Post = ({ params }) => {
   }, [params.blogId,router]);
 
   if (!blog) {
-    return <div>Loading...</div>;
+    return <Loading></Loading>
   }
 
   return <div>Post : {blog.title}</div>;
