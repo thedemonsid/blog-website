@@ -1,16 +1,16 @@
 const axios = require("axios");
 // Function to fetch all blogs
-export async function fetchBlogs() {
+export async function fetchBlogs(id) {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: "/api/blogs/",
+    url: id ? `/api/blogs/${id}` : "/api/blogs/",
     headers: {},
   };
   try {
     const response = await axios.request(config);
-    console.log(response.data);
+    return response.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
