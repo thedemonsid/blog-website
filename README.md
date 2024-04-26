@@ -66,6 +66,9 @@ Thank you for your contributions!
 ### Learn More About NextAuth and How to aquire github and google id/secret
 [![NextAuth Tutorial](http://img.youtube.com/vi/MNm1XhDjX1s/0.jpg)](http://www.youtube.com/watch?v=MNm1XhDjX1s "NextAuth Tutorial")
 
+### Learn More About MongoDB Integration
+[![Integration Tutorial](http://img.youtube.com/vi/JIlYroSsInU/0.jpg)](https://youtu.be/JIlYroSsInU?si=MwQgEGMnMWrrrp6K "Integration Tutorial")
+
 ## Testing the Code
 
 Before running the tests, make sure all the dependencies are installed. You can install them by running:
