@@ -18,7 +18,7 @@ const Post = ({ params }) => {
     };
 
     fetchBlogData();
-  }, [params.blogId]);
+  }, [params.blogId,router]);
 
   if (!blog) {
     return <div>Loading...</div>;
