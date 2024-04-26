@@ -9,7 +9,7 @@ export const options = {
         email: {
           label: "Email",
           type: "email",
-          placeholder: "siddhesh@gmail.com",
+          placeholder: "siddheshshrirame@gmail.com",
         },
         password: { label: "Password", type: "password" },
       },
