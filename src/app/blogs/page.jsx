@@ -54,7 +54,7 @@ const Blog = () => {
     const fetchBlogData = async () => {
       try {
         const data = await fetchBlogs();
-        console.log(data.Blogs);
+      //  console.log(data.Blogs);
         setBlogs(data.Blogs);
       } catch (error) {
         console.error(error);
@@ -66,9 +66,9 @@ const Blog = () => {
     fetchBlogData();
   }, [router]);
 
-  if (!blogs) {
-    return <Loading></Loading>;
-  }
+  // if (!blogs) {
+  //   return <Loading></Loading>;
+  // }
   return (
     <div className="text-yellow-300 bg-gray-800 font-techy">
       <div className="p-8 pb-2 ">
