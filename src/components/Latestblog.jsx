@@ -9,7 +9,7 @@ function Latestblog() {
         </h1>
         <div className="p-3 font-techy">
           {[...Array(6)].map((_, index) => (
-            <Link href={"/...posts"} key={index}>
+            <Link href={"/blogs"} key={index}>
               <div className="mb-1 text-sm sm:text-md text-slate-200 hover:underline hover:text-slate-400">
                 <span>04/03/2004: </span>
                 <span className="text-yellow-400 hover:text-slate-400">

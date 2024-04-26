@@ -66,9 +66,9 @@ const Blog = () => {
     fetchBlogData();
   }, [router]);
 
-  // if (!blogs) {
-  //   return <Loading></Loading>;
-  // }
+  if (!blogs) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="text-yellow-300 bg-gray-800 font-techy">
       <div className="p-8 pb-2 ">
