@@ -1,5 +1,5 @@
 import React from 'react'
-import thedemonsidimg from "@/app/images/the_demon_sid2.png";
+import thedemonsidimg from "../../../public/images/the_demon_sid2.png";
 import Image from 'next/image';
 function Tdsintro() {
   return (

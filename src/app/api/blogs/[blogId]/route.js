@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/dbConfig/dbConfig";
-import Blog from "@/models/blogModel";
+import { Blog } from "@/models/blogModel";
 // Getting the particular blog by Id
 export async function GET(request, context) {
   try {

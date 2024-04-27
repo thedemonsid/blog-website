@@ -1,5 +1,5 @@
 import dbConnect from "@/dbConfig/dbConfig";
-import Blog from "@/models/blogModel";
+import {Blog} from "@/models/blogModel";
 import { NextResponse } from "next/server";
 export async function PUT(request) {
   try {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import cornerpiece from "@/app/images/corner-piece.png";
+import cornerpiece from "../../public/images/corner-piece.png";
 function Projectshowcase() {
   return (
     <div>
