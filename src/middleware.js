@@ -3,7 +3,8 @@ import { withAuth } from "next-auth/middleware";
 
 export default withAuth({
   async handler(req, res, next) {
-    const { pathname, token } = req;
+    const pathname = req.nextUrl.pathname;
+    const token = req.nextauth.token;
 
     const authorizedEmails = ["siddheshshrirame@gmail.com"];
 
