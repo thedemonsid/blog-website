@@ -8,6 +8,8 @@ function Page() {
     setContent(e.target.value);
   };
 
+
+
   const handleSave = () => {
     // save the content to a json file
     const data = JSON.stringify({ content });
@@ -41,7 +43,6 @@ function Page() {
       </div>
       <div className='relative w-full md:w-1/2 h-1/2 md:h-screen overflow-auto bg-gray-500 border-2 border-yellow-300 preview'>
         <h1 className='absolute top-0 left-0 w-full mt-3 font-mono text-3xl text-center'>Preview</h1>
-        {/* Render content using dangerouslySetInnerHTML */}
         <div dangerouslySetInnerHTML={{ __html: content }} className='mt-10 ' onClick={displayContent} />
       </div>
       <button className='absolute bottom-0 right-0 font-mono text-2xl bg-yellow-300 text-slate-900' onClick={handleSave}>Save</button>

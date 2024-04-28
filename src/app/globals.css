@@ -78,3 +78,119 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* General styles */
+vs-title, vs-subtitle {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+vs-log, vs-list {
+  display: block;
+  margin: 1rem;
+
+}
+
+vs-item {
+  display: list-item;
+  margin-left: 1rem;
+  color: goldenrod;
+}
+
+/* Heading styles */
+vs-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c65050; /* Redish */
+}
+
+vs-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b6d91a; /* Greenish */
+}
+
+/* Paragraph style */
+vs-log {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f7fafc; /* Light gray */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Highlight style */
+vs-item {
+
+  color: gold; /* Dark gray */
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+/* Code style */
+ancient-script {
+  display: block;
+  font-family: 'Courier New', Courier;
+  background-color: #2d3748; /* Dark gray */
+  color: #81e6d9; /* Bluish-green */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  white-space: pre-wrap;
+}
+vs-code-editor {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  white-space: pre-wrap;
+}
+
+vs-code-highlight {
+  color: #e6db74;
+  font-weight: bold;
+}
+
+vs-code-comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+vs-code-error {
+  color: #f44747;
+  text-decoration: underline wavy;
+}
+
+vs-code-ref {
+  color: #ae81ff;
+  text-decoration: underline;
+}
+
+vs-code-output {
+  color: #a6e22e;
+  font-weight: bold;
+}
+
+vs-code-lang {
+  color: #f8f8f2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+vs-code-package {
+  color: #66d9ef;
+  font-weight: bold;
+}
+img {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+
+
