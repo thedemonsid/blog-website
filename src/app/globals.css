@@ -5,6 +5,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+/* Reset some default styles to ensure consistent behavior across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 
 @layer base {
   :root {
@@ -95,19 +104,21 @@ vs-log, vs-list {
 vs-item {
   display: list-item;
   margin-left: 1rem;
-  color: goldenrod;
+  color: rgb(194, 159, 72);
 }
 
 /* Heading styles */
 vs-title {
   font-size: 2rem;
+  top: 1.5rem;
   font-weight: bold;
-  color: #c65050; /* Redish */
+  color: rgb(224, 146, 172); /* Redish */
 }
 
 vs-subtitle {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 1rem;
   color: #b6d91a; /* Greenish */
 }
 
@@ -115,9 +126,17 @@ vs-subtitle {
 vs-log {
   font-size: 1rem;
   line-height: 1.5;
-  color: #f7fafc; /* Light gray */
+  color: rgb(203, 178, 178); 
   font-family: 'Courier New', Courier, monospace;
 }
+
+vs-sidehead{
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #b6d91a; 
+font-family: 'Courier New', Courier, monospace;
+}
+
 
 /* Highlight style */
 vs-item {
@@ -139,6 +158,7 @@ ancient-script {
 }
 vs-code-editor {
   display: block;
+  margin-top: 1rem;
   font-family: 'Courier New', Courier, monospace;
   background-color: #1e1e1e;
   color: #d4d4d4;
@@ -148,7 +168,7 @@ vs-code-editor {
 }
 
 vs-code-highlight {
-  color: #e6db74;
+  color: #bcb362;
   font-weight: bold;
 }
 
@@ -173,15 +193,20 @@ vs-code-output {
 }
 
 vs-code-lang {
-  color: #f8f8f2;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #b6d91a;
+  font-style: oblique;
+ 
 }
 
 vs-code-package {
   color: #66d9ef;
   font-weight: bold;
 }
+vs-var{
+  color: orange;
+  font-weight: 300;
+}
+
 img {
   max-width: 50%;
   height: auto;
@@ -190,6 +215,14 @@ img {
   margin: 0 auto;
   display: block;
   border-radius: 0.5rem;
+}
+li{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: rgb(224, 146, 172); /* Redish */
+  list-style: lower-greek;
 }
 
 

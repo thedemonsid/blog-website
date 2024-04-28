@@ -25,7 +25,6 @@ function Page() {
   }
 
   const handleClick = () => {
-    // Copy the current value of the textarea to the content state
     const editorContent = document.querySelector('.editor textarea').value;
     setContent(editorContent);
   };
@@ -37,15 +36,15 @@ function Page() {
   return (
     <div className='relative flex flex-col md:flex-row w-full h-screen text-yellow-300 wrapper font-techy'>
       <div className='relative w-full md:w-1/2 h-1/2 md:h-screen bg-gray-300 border-2 border-yellow-300 editor'>
-        <h1 className='absolute top-0 left-0 w-full mt-1 font-mono text-3xl text-center'>Editor</h1>
-        <textarea className='w-full h-full overflow-auto bg-slate-900'></textarea>
-        <button className='absolute bottom-0 right-0 font-mono text-2xl bg-yellow-300 text-slate-900' onClick={handleClick}>Preview</button>
+        <h1 className='absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center'>Editor</h1>
+        <textarea className='w-full h-full overflow-auto bg-gray-700 '></textarea>
+        <button className='absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500' onClick={handleClick}>Preview</button>
       </div>
-      <div className='relative w-full md:w-1/2 h-1/2 md:h-screen overflow-auto bg-gray-500 border-2 border-yellow-300 preview'>
-        <h1 className='absolute top-0 left-0 w-full mt-3 font-mono text-3xl text-center'>Preview</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} className='mt-10 ' onClick={displayContent} />
+      <div className='relative w-full md:w-1/2 h-1/2 md:h-screen overflow-auto bg-gray-800 border-2 border-yellow-300 preview'>
+        <h1 className='absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center'>Preview</h1>
+        <div dangerouslySetInnerHTML={{ __html: content }} className='mt-10 ml-2' onClick={displayContent} />
       </div>
-      <button className='absolute bottom-0 right-0 font-mono text-2xl bg-yellow-300 text-slate-900' onClick={handleSave}>Save</button>
+      <button className='absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500' onClick={handleSave}>Save</button>
     </div>
   );
 }
