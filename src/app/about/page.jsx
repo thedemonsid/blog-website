@@ -97,8 +97,8 @@ const About = () => {
             <li>The editor: VS Code</li>
             <li>
               Softwares you should use more:{" "}
-              <span className="font-bold">Postman (The_demon_sid)</span> and{" "}
-              <span className="font-bold">Wrap Terminal (Vdcds)</span>
+              <span className="font-bold">Postman (the_demon_sid)</span> and{" "}
+              <span className="font-bold">Warp Terminal (Vdcds)</span>
             </li>
           </ol>
         </div>
