@@ -123,6 +123,12 @@ export default function Nav() {
             >
               Blogs
             </Link>
+            <Link
+              className="flex items-center font-medium transition-colors text-md hover:underline"
+              href="/editor"
+            >
+              Write
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             {session ? (
