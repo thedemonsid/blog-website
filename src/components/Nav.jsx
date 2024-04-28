@@ -80,15 +80,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 export default function Nav() {
   const { data: session } = useSession();
+  const router = useRouter();
   console.log(session?.user);
   const handleSignInClick = () => {
     signIn();
   };
   const handleSignOutClick = () => {
-    signOut();
+    router.push("/api/auth/signout");
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
