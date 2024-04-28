@@ -1,23 +1,25 @@
 import { NextResponse } from "next/server";
 import { withAuth } from "next-auth/middleware";
 
-export default withAuth(
-  function middleware(req) {
-    const pathName = req.nextUrl.pathname;
-    const email = req.nextauth.token?.email;
+export default withAuth({
+  async handler(req, res, next) {
+    const { pathname, token } = req;
+
+    const authorizedEmails = ["siddheshshrirame@gmail.com"];
+
     if (
-      pathName.startsWith("/editor") &&
-      email !== "siddheshshrirame@gmail.com"
+      pathname.startsWith("/editor") &&
+      !authorizedEmails.includes(token.email)
     ) {
-      return NextResponse.rewrite(new URL("/denied", req.url));
+      return NextResponse.rewrite("/denied");
     }
+
+    return next();
   },
-  {
-    callbacks: {
-      authorized: ({ token }) => !!token, //check if token is present
-    },
-  }
-);
+  callbacks: {
+    authorized: ({ token }) => !!token,
+  },
+});
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: ["/editor"],
