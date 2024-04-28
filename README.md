@@ -66,7 +66,7 @@ Thank you for your contributions!
 
 ### Learn More About NextAuth and How to aquire github and google id/secret
 [![NextAuth Tutorial](http://img.youtube.com/vi/MNm1XhDjX1s/0.jpg)](http://www.youtube.com/watch?v=MNm1XhDjX1s "NextAuth Tutorial")
-
+[![MonogDB Database Connection with Google Provider in NextAuth](http://img.youtube.com/vi/I_YCC_nFt70/0.jpg)](https://youtu.be/I_YCC_nFt70?si=CwSLD5-dV_Ed_GPp "MonogDB Database Connection with Google Provider in NextAuth")
 ### Learn More About MongoDB Integration
 [![Integration Tutorial](http://img.youtube.com/vi/JIlYroSsInU/0.jpg)](https://youtu.be/JIlYroSsInU?si=MwQgEGMnMWrrrp6K "Integration Tutorial")
 
