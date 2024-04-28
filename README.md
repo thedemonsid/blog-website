@@ -4,16 +4,19 @@
 - [x] github Setup
 - [x] Deploying the website
 - [x] Adding PR Template
-- [ ] Creating Home page 
-- [ ] Creating Blogs page
-- [ ] Creating Blog Component
-- [ ] Adding Loaders and sonner
+- [x] Creating Home page 
+- [x] Creating Blogs page
+- [x] Creating Blog Component
+- [x] Adding Loaders and sonner
 - [x] Database Connection
 - [x] Backend routes(Basics)
 - [x] Helper functions(fetch,delete,update)
 - [ ] Backend routes(Advanced)
 - [ ] Input Validation
+- [x] Custom Text Editor
 - [x] Authentication
+- [ ] Custom SignIn And SignOut Pages
+- [ ] One Time Login which remains along time (Tokens!!!!)
 - [ ] Aesthetics
 
 
