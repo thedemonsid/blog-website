@@ -26,7 +26,7 @@ export const options = {
             const user = User.create({
               email: profile.email,
               name: profile.name,
-              image: profile.picture,
+              image: profile.avatar_url || profile.picture,
             });
             return true;
           } catch (error) {
