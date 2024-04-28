@@ -1,32 +1,90 @@
 import mongoose from "mongoose";
-const blogSchema = mongoose.Schema(
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    about: {
+      type: String,
+    },
+    image: {
+      type: String,
+    },
+    blogsWritten: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Blog",
+      },
+    ],
+    bookmarkedBlogs: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Blog",
+      },
+    ],
+  },
+  { timestamps: true }
+);
+
+let User;
+try {
+  User = mongoose.model("User");
+} catch (error) {
+  User = mongoose.model("User", userSchema);
+}
+const commentSchema = new mongoose.Schema(
+  {
+    content: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
+let Comment;
+try {
+  Comment = mongoose.model("Comment");
+} catch (error) {
+  Comment = mongoose.model("Comment", commentSchema);
+}
+
+const blogSchema = new mongoose.Schema(
   {
     title: {
       type: String,
+      required: true,
     },
     content: {
       type: String,
+      required: true,
     },
-    images: {
-      type: [
-        {
-          position: Number, // After How many words User wants an image
-          url: String,
-        },
-      ],
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
-    username: {
-      type: String,
-    },
-    comments: {
-      type: [String],
-    },
-    number_of_clicks: {
-      type: Number,
-    },
-    number_of_likes: {
-      type: Number,
-    },
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
   },
   { timestamps: true }
 );
@@ -38,4 +96,4 @@ try {
   Blog = mongoose.model("Blog", blogSchema);
 }
 
-export default Blog;
+export { User, Blog, Comment };

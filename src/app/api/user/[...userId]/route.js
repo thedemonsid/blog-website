@@ -1,29 +1,29 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/dbConfig/dbConfig";
-import { Blog } from "@/models/blogModel";
-// Getting the particular blog by Id
+import { User } from "@/models/blogModel";
+// Getting the particular user by Id
 export async function GET(request, context) {
   try {
     await dbConnect();
 
     const { params } = context;
-    const id = params.blogId;
-    let blog;
+    const id = params.userId;
+    let user;
     try {
-      blog = await Blog.findById(id);
+      user = await User.findById(id);
     } catch (error) {
       return NextResponse.json(
         {
-          message: "Blog not found",
+          message: "User not found",
           success: false,
         },
         { status: 400 }
       );
     }
-    if (!blog) {
+    if (!user) {
       return NextResponse.json(
         {
-          message: "No Blog found with this Id",
+          message: "No User found with this Id",
           success: false,
         },
         { status: 404 }
@@ -31,8 +31,8 @@ export async function GET(request, context) {
     }
     return NextResponse.json(
       {
-        message: "Blog found",
-        Blog: blog,
+        message: "User found",
+        User: user,
         success: true,
       },
       { status: 200 }
@@ -43,29 +43,29 @@ export async function GET(request, context) {
     });
   }
 }
-// Updating the blogs by Id
+// Updating the user by Id
 export async function POST(request, context) {
   try {
     await dbConnect();
     const body = await request.json();
     const { params } = context;
-    const id = params.blogId;
-    let blog;
+    const id = params.userId;
+    let user;
     try {
-      blog = await Blog.findByIdAndUpdate(id, body);
+      user = await User.findByIdAndUpdate(id, body);
     } catch (error) {
       return NextResponse.json(
         {
-          message: "Blog not found and not able to update",
+          message: "User not found and not able to update",
           success: false,
         },
         { status: 400 }
       );
     }
-    if (!blog) {
+    if (!user) {
       return NextResponse.json(
         {
-          message: "No blog found with this ID",
+          message: "No user found with this ID",
           success: false,
         },
         { status: 404 }
@@ -73,8 +73,8 @@ export async function POST(request, context) {
     }
     return NextResponse.json(
       {
-        message: "Blog found and updated",
-        newBlog: blog,
+        message: "User found and updated",
+        newUser: user,
         success: true,
       },
       { status: 200 }
@@ -85,29 +85,29 @@ export async function POST(request, context) {
     });
   }
 }
-// Deleting the Blogs by Id
+// Deleting the Users by Id
 export async function DELETE(request, context) {
   try {
     await dbConnect();
 
     const { params } = context;
-    const id = params.blogId;
-    let blog;
+    const id = params.userId;
+    let user;
     try {
-      blog = await Blog.findByIdAndDelete(id);
+      user = await User.findByIdAndDelete(id);
     } catch (error) {
       return NextResponse.json(
         {
-          message: "Blog was not able to delete",
+          message: "User was not able to delete",
           success: false,
         },
         { status: 400 }
       );
     }
-    if (!blog) {
+    if (!user) {
       return NextResponse.json(
         {
-          message: "No Blog with this Id exists",
+          message: "No User with this Id exists",
           success: false,
         },
         { status: 404 }
@@ -115,8 +115,8 @@ export async function DELETE(request, context) {
     }
     return NextResponse.json(
       {
-        message: "Blog Deleted Successfully",
-        deletedBlog: blog,
+        message: "User Deleted Successfully",
+        deletedUser: user,
         success: true,
       },
       { status: 200 }

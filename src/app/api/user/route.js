@@ -1,17 +1,17 @@
 import dbConnect from "@/dbConfig/dbConfig";
-import {Blog} from "@/models/blogModel";
+import { User } from "@/models/blogModel";
 import { NextResponse } from "next/server";
 export async function PUT(request) {
   try {
     const body = await request.json();
     await dbConnect();
-    const newBlog = new Blog(body);
+    const newUser = new User(body);
     try {
-      await newBlog.save();
+      await newUser.save();
     } catch (error) {
       return NextResponse.json(
         {
-          message: "Failed adding the product to DB",
+          message: "Failed adding the user to DB",
           success: false,
           error: error,
         },
@@ -20,9 +20,9 @@ export async function PUT(request) {
     }
     return NextResponse.json(
       {
-        message: "Successfully added the product",
+        message: "Successfully added the user",
         success: true,
-        newBlog,
+        newUser,
       },
       { status: 200 }
     );
@@ -39,22 +39,22 @@ export async function PUT(request) {
 export async function GET() {
   try {
     await dbConnect();
-    let blogs;
+    let users;
     try {
-      blogs = await Blog.find();
+      users = await User.find();
     } catch (error) {
       return NextResponse.json(
         {
-          message: "Erro While getting blogs from DB",
+          message: "Error while getting users from DB",
           success: false,
         },
         { status: 400 }
       );
     }
-    if (!blogs) {
+    if (!users) {
       return NextResponse.json(
         {
-          message: "Blogs not found",
+          message: "Users not found",
           success: false,
         },
         { status: 404 }
@@ -62,8 +62,8 @@ export async function GET() {
     }
     return NextResponse.json(
       {
-        message: "Blogs found",
-        Blogs: blogs,
+        message: "Users found",
+        Users: users,
         success: true,
       },
       { status: 200 }

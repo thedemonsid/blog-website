@@ -1,5 +1,5 @@
 ## Blog Website
-- [ ] <span style="color:red;">Proper MongoDB integration.</span>
+- [ ] Proper MongoDB integration.
 - [x] Nextjs & shadcn setup
 - [x] github Setup
 - [x] Deploying the website
