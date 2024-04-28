@@ -83,6 +83,7 @@ import { useState } from "react";
 
 export default function Nav() {
   const { data: session } = useSession();
+  console.log(session?.user);
   const handleSignInClick = () => {
     signIn();
   };
@@ -210,4 +211,3 @@ export default function Nav() {
     </nav>
   );
 }
-
