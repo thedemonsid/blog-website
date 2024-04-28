@@ -17,22 +17,16 @@ export const options = {
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async signIn({ profile }) {
-      console.log(profile);
       try {
         await dbConnect();
         const userExist = await User.findOne({ email: profile.email });
         if (!userExist) {
-          try {
-            const user = User.create({
-              email: profile.email,
-              name: profile.name,
-              image: profile.avatar_url || profile.picture,
-            });
-            return true;
-          } catch (error) {
-            console.log(error);
-            return false;
-          }
+          const user = await User.create({
+            email: profile.email,
+            name: profile.name || "",
+            image: profile.avatar_url || profile.picture || "",
+          });
+          return true;
         }
         return true;
       } catch (error) {
@@ -44,7 +38,9 @@ export const options = {
       await dbConnect();
       if (session) {
         const sessionUser = await User.findOne({ email: session.user.email });
-        session.user.id = sessionUser._id;
+        if (sessionUser) {
+          session.user.id = sessionUser._id;
+        }
       }
       return session;
     },
