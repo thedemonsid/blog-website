@@ -84,7 +84,6 @@ import { useRouter } from "next/navigation";
 export default function Nav() {
   const { data: session } = useSession();
   const router = useRouter();
-  console.log(session?.user);
   const handleSignInClick = () => {
     signIn();
   };
