@@ -50,11 +50,13 @@ function Page() {
   };
 
   useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.addEventListener("keydown", handleKeyDown);
+    const currentTextarea = textareaRef.current;
+
+    if (currentTextarea) {
+      currentTextarea.addEventListener("keydown", handleKeyDown);
 
       return () => {
-        textareaRef.current.removeEventListener("keydown", handleKeyDown);
+        currentTextarea.removeEventListener("keydown", handleKeyDown);
       };
     }
   }, [handleKeyDown]);
