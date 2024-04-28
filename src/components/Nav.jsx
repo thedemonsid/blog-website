@@ -211,6 +211,12 @@ export default function Nav() {
             >
               Blogs
             </Link>
+            <Link
+              href="/editor"
+              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+            >
+              Write
+            </Link>
           </div>
         </div>
       )}
