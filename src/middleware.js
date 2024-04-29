@@ -14,8 +14,6 @@ export default withAuth(
     ) {
       return NextResponse.rewrite(new URL("/denied", req.url));
     }
-
-    return next();
   },
   {
     callbacks: {
