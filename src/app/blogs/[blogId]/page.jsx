@@ -14,18 +14,25 @@ const Post = ({ params }) => {
         setBlog(data.Blog);
       } catch (error) {
         console.error(error);
-        router.push("/blogs")
+        router.push("/blogs");
       }
     };
 
     fetchBlogData();
-  }, [params.blogId,router]);
+  }, [params.blogId, router]);
 
   if (!blog) {
-    return <Loading></Loading>
+    return <Loading></Loading>;
   }
 
-  return <div>Post : {blog.title}</div>;
+  return (
+    <div className="flex justify-center items-center bg-gray-800">
+      <div
+        dangerouslySetInnerHTML={{ __html: blog.content }}
+        className=" px-4 h-screen max-w-[1000px]"
+      />
+    </div>
+  );
 };
 
 export default Post;

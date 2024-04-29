@@ -70,7 +70,7 @@ const Blog = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="text-yellow-300 bg-gray-800 font-techy">
+    <div className="text-yellow-300 bg-gray-800 font-techy h-screen">
       <div className="p-8 pb-2 ">
         <h1 className="mt-0 text-2xl font-bold text-center sm:text-6xl ">
           The Vault

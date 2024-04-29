@@ -78,12 +78,23 @@ const blogSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    comments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
-      },
-    ],
+    comments: {
+      type: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Comment",
+        },
+      ],
+      default: [],
+    },
+    number_of_clicks: {
+      type: Number,
+      default: 0,
+    },
+    number_of_likes: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );
