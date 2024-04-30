@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Milonga&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Milonga&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Milonga&family=Space+Grotesk:wght@300..700&display=swap"); 
 @import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap');
 @tailwind base;
 @tailwind components;
@@ -13,6 +13,7 @@
   box-sizing: border-box;
   
 }
+
 
 
 @layer base {
@@ -92,7 +93,7 @@
 vs-title, vs-subtitle {
   display: block;
   text-align: center;
-  margin: 1rem 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 vs-log, vs-list {
@@ -110,15 +111,19 @@ vs-item {
 /* Heading styles */
 vs-title {
   font-size: 2rem;
-  top: 1.5rem;
+  top: .5rem;
   font-weight: bold;
-  color: rgb(224, 146, 172); /* Redish */
+  position: relative;
+
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgb(2224, 146, 172); /* Redish */
 }
 
 vs-subtitle {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
+  margin-left: 1rem;
   color: #b6d91a; /* Greenish */
 }
 
@@ -133,6 +138,7 @@ vs-log {
 vs-sidehead{
   font-size: 1.2rem;
   line-height: 1.5;
+  margin-left: 1rem;
   color: #b6d91a; 
 font-family: 'Courier New', Courier, monospace;
 }
@@ -157,7 +163,7 @@ ancient-script {
   white-space: pre-wrap;
 }
 vs-code-editor {
-  display: block;
+display: block;
   margin-top: 1rem;
   font-family: 'Courier New', Courier, monospace;
   background-color: #1e1e1e;
@@ -225,5 +231,16 @@ li{
   list-style: lower-greek;
 }
 
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
+.animate-jump {
+  animation: jump 1s infinite;
+}
 

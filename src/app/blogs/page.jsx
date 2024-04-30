@@ -4,6 +4,24 @@ import { fetchBlogs } from "@/helpers/fetchData";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Loading from "@/app/loading";
+const blogdescs = [
+  {
+    title: "The Vault",
+    description: "A place where secrets are stored",
+  },
+  {
+    title: "The Vault",
+    description: "A place all secrets are stored",
+  },
+  {
+    title: "The Vault",
+    description: "A place where secrets are stored",
+  },
+  {
+    title: "The Vault",
+    description: "A place where secrets are stored",
+  },
+];
 function formatDate(dateString) {
   const days = [
     "SUNDAY",
@@ -46,6 +64,7 @@ function formatDate(dateString) {
 
   return `${day}, ${month} ${dateOfMonth}${suffix}, ${year}`;
 }
+
 const Blog = () => {
   const router = useRouter();
   const [blogs, setBlogs] = useState(null);
@@ -71,7 +90,7 @@ const Blog = () => {
   }
   return (
     <div className="text-yellow-300 bg-gray-800 font-techy">
-      <div className="p-8 pb-2 ">
+      <div className="p-8 pb-5 ">
         <h1 className="mt-0 text-2xl font-bold text-center sm:text-6xl ">
           The Vault
         </h1>
@@ -81,6 +100,9 @@ const Blog = () => {
               <h2 className="font-bold tracking-widest uppercase text-md sm:text-2xl hover:text-red-500">
                 {blog.title}
               </h2>
+              <p className="text-gray-400">
+                {blogdescs[index].description}
+              </p>
               <p className="text-gray-400">
                 POSTED ON {formatDate(blog.createdAt)}
               </p>

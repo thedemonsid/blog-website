@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchBlogs } from "@/helpers/fetchData";
 import { useRouter } from "next/navigation";
 import Loading from "@/app/loading";
+import "@/app/globals.css"
 const Post = ({ params }) => {
   const router = useRouter();
   const [blog, setBlog] = useState(null);
@@ -25,7 +26,9 @@ const Post = ({ params }) => {
     return <Loading></Loading>
   }
 
-  return <div>Post : {blog.title}</div>;
+  return <div className=" bg-gray-800 pb-2">
+   <div className="w-[100%]" dangerouslySetInnerHTML={{__html: blog.content}}></div>
+  </div>;
 };
 
 export default Post;
