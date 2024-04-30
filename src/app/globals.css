@@ -12,12 +12,16 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
   
 }
-/* Scrollbar styles */
+
 ::-webkit-scrollbar {
-  display: none; /* Chrome, Edge, Safari, Edge */
+  display: none; 
+
+
 }
+
 
 
 
@@ -168,6 +172,8 @@ ancient-script {
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
+
 }
 vs-code-editor {
 display: block;
@@ -178,8 +184,8 @@ display: block;
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 vs-code-highlight {
