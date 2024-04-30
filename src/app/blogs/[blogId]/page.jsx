@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { fetchBlogs } from "@/helpers/fetchData";
+import { oneTimeBlogs } from "@/helpers/oneTimeBlogsFetch";
 import { useRouter } from "next/navigation";
 import Loading from "@/app/loading";
 import "@/app/globals.css"
@@ -11,19 +11,20 @@ const Post = ({ params }) => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const data = await fetchBlogs(params.blogId);
-        setBlog(data.Blog);
+        const data = await oneTimeBlogs(params.blogId);
+        let Blog = data.Blogs.find((blog) => blog._id === params.blogId);
+        setBlog(Blog);
       } catch (error) {
         console.error(error);
-        router.push("/blogs")
+        router.push("/blogs");
       }
     };
 
     fetchBlogData();
-  }, [params.blogId,router]);
+  }, [params.blogId, router]);
 
   if (!blog) {
-    return <Loading></Loading>
+    return <Loading></Loading>;
   }
 
   return <div className=" bg-gray-800 pb-2">

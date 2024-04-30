@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { fetchBlogs } from "@/helpers/fetchData";
+import { oneTimeBlogs } from "@/helpers/oneTimeBlogsFetch";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Loading from "@/app/loading";
@@ -72,8 +72,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const data = await fetchBlogs();
-      //  console.log(data.Blogs);
+        const data = await oneTimeBlogs();
         setBlogs(data.Blogs);
       } catch (error) {
         console.error(error);
