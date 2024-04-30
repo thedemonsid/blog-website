@@ -11,8 +11,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   
 }
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari, Edge */
+}
+
 
 
 
@@ -94,6 +100,7 @@ vs-title, vs-subtitle {
   display: block;
   text-align: center;
   font-family: "Space Grotesk", sans-serif;
+
 }
 
 vs-log, vs-list {
@@ -171,6 +178,8 @@ display: block;
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 vs-code-highlight {
@@ -263,6 +272,11 @@ li{
   vs-sidehead {
     font-size: 1.2rem;
     font-weight: 900;
+  }
+  vs-code-editor {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
