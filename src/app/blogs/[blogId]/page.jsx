@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { fetchBlogs } from "@/helpers/fetchData";
+import { oneTimeBlogs } from "@/helpers/oneTimeBlogsFetch";
 import { useRouter } from "next/navigation";
 import Loading from "@/app/loading";
 const Post = ({ params }) => {
@@ -10,8 +10,9 @@ const Post = ({ params }) => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const data = await fetchBlogs(params.blogId);
-        setBlog(data.Blog);
+        const data = await oneTimeBlogs(params.blogId);
+        let Blog = data.Blogs.find((blog) => blog._id === params.blogId);
+        setBlog(Blog);
       } catch (error) {
         console.error(error);
         router.push("/blogs");
