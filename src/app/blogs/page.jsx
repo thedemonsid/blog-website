@@ -95,7 +95,7 @@ const Blog = () => {
         </h1>
         {blogs.map((blog, index) => (
           <Link key={index} href={`/blogs/${blog._id}`} passHref>
-            <div className="mb-8 cursor-pointer">
+            <div className="mb-8 cursor-crosshair">
               <h2 className="font-bold tracking-widest uppercase text-md sm:text-2xl hover:text-red-500">
                 {blog.title}
               </h2>

@@ -244,3 +244,25 @@ li{
   animation: jump 1s infinite;
 }
 
+@media (max-width: 768px) {
+  vs-title {
+    font-size: 1.5rem;
+  }
+  vs-subtitle {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  vs-log {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  vs-sidehead {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+}
+

@@ -5,6 +5,7 @@ import Latestblog from "@/components/Latestblog";
 import Projectshowcase from "@/components/Projectshowcase";
 
 export default function Home() {
+  
   return (
     <div className="w-full min-h-screen p-3 text-yellow-100 bg-gray-800">
       <Headingtxt></Headingtxt>
