@@ -4,24 +4,32 @@ import { oneTimeBlogs } from "@/helpers/oneTimeBlogsFetch";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Loading from "@/app/loading";
-const blogdescs = [
-  {
-    title: "The Vault",
-    description: "A place where secrets are stored",
-  },
-  {
-    title: "The Vault",
-    description: "A place all secrets are stored",
-  },
-  {
-    title: "The Vault",
-    description: "A place where secrets are stored",
-  },
-  {
-    title: "The Vault",
-    description: "A place where secrets are stored",
-  },
+const Taglist = [
+  "deep-dive",
+  "weekend-project",
+  "deep-dive",
+  "weekend-project",
+  "deep-dive",
 ];
+// const blogdescs = [
+//   {
+//     title: "The Vault",
+//     description:
+//       "A place where secrets are stored dis be a demo  desc hahah lol . ",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place all secrets are stored",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place where secrets are stored",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place where secrets are stored",
+//   },
+// ];
 function formatDate(dateString) {
   const days = [
     "SUNDAY",
@@ -46,7 +54,6 @@ function formatDate(dateString) {
     "NOVEMBER",
     "DECEMBER",
   ];
-
   const date = new Date(dateString);
   const day = days[date.getDay()];
   const month = months[date.getMonth()];
@@ -96,11 +103,12 @@ const Blog = () => {
         {blogs.map((blog, index) => (
           <Link key={index} href={`/blogs/${blog._id}`} passHref>
             <div className="mb-8 cursor-crosshair">
-              <h2 className="font-bold tracking-widest uppercase text-md sm:text-2xl hover:text-red-500">
+              <h2 className="font-bold tracking-widest text-red-400 uppercase text-md sm:text-2xl hover:text-gray-500">
                 {blog.title}
               </h2>
-              <p className="text-gray-400">
-                {blogdescs[index].description}
+              <p className="text-yellow-400">{blog.description}</p>
+              <p className="inline-flex items-center justify-center px-3 py-1 text-sm text-white bg-yellow-800 rounded-full font-techy">
+                {Taglist[index]}
               </p>
               <p className="text-gray-400">
                 POSTED ON {formatDate(blog.createdAt)}

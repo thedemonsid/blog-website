@@ -1,10 +1,16 @@
 import React from "react";
+import Vdcdsintro from "@/components/intro-cards/Vdcdsintro";
+import Tdsintro from "@/components/intro-cards/Tdsintro";
 
 const About = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full min-h-screen mt-0 bg-slate-800 font-techy">
-      <h1 className="mt-0 mb-8 text-4xl text-yellow-300 ">About</h1>
-      <div className="flex flex-col space-y-8">
+      <h1 className="mt-3 mb-8 text-4xl text-yellow-300 ">About</h1>
+      <div className="flex flex-col mt-2 mb-4 ml-3 mr-3 space-y-3 text-yellow-300 sm:flex-row sm:space-y-0 sm:space-x-3 bg-slate-800">
+        <Vdcdsintro></Vdcdsintro>
+        <Tdsintro></Tdsintro>
+      </div>
+      <div className="flex flex-col ml-3 mr-3 space-y-8">
         <div className="p-4 text-yellow-300 bg-gray-800 border-2 border-orange-200 rounded-md shadow-md shadow-gray-300">
           <h2 className="mb-4 text-2xl">Why Vdsidously :</h2>
           <p>

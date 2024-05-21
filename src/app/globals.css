@@ -140,10 +140,10 @@ vs-subtitle {
 
 /* Paragraph style */
 vs-log {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: rgb(203, 178, 178); 
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Space Grotesk", sans-serif
 }
 
 vs-sidehead{
@@ -151,7 +151,7 @@ vs-sidehead{
   line-height: 1.5;
   margin-left: 1rem;
   color: #b6d91a; 
-font-family: 'Courier New', Courier, monospace;
+font-family: 'Space Grotesk', sans-serif;
 }
 
 
@@ -261,7 +261,7 @@ li{
 
 @media (max-width: 768px) {
   vs-title {
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
   }
   vs-subtitle {
     font-size: 1.3rem;
@@ -285,4 +285,5 @@ li{
     margin-right: 0.5rem;
   }
 }
+
 

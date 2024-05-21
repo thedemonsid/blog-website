@@ -73,6 +73,10 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: true,
+    },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
@@ -87,6 +91,7 @@ const blogSchema = new mongoose.Schema(
       ],
       default: [],
     },
+
     number_of_clicks: {
       type: Number,
       default: 0,
@@ -107,3 +112,4 @@ try {
 }
 
 export { User, Blog, Comment };
+

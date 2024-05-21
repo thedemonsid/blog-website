@@ -1,10 +1,3 @@
-// export default function Loading() {
-//   return (
-//     <div className="flex justify-center items-center h-screen">
-//       <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>
-//     </div>
-//   );
-// }
 
 "use client"
 import React, { useEffect, useState } from 'react';
@@ -33,7 +26,7 @@ const Loading = () => {
   }, [dots]);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-800">
+    <div className="flex items-center justify-center h-screen bg-gray-800">
       <div className="flex space-x-2">
         {Array.from({ length: totalDots }, (_, i) => (
           <div
