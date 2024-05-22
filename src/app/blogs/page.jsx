@@ -4,6 +4,32 @@ import { oneTimeBlogs } from "@/helpers/oneTimeBlogsFetch";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Loading from "@/app/loading";
+const Taglist = [
+  "deep-dive",
+  "weekend-project",
+  "deep-dive",
+  "weekend-project",
+  "deep-dive",
+];
+// const blogdescs = [
+//   {
+//     title: "The Vault",
+//     description:
+//       "A place where secrets are stored dis be a demo  desc hahah lol . ",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place all secrets are stored",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place where secrets are stored",
+//   },
+//   {
+//     title: "The Vault",
+//     description: "A place where secrets are stored",
+//   },
+// ];
 function formatDate(dateString) {
   const days = [
     "SUNDAY",
@@ -28,7 +54,6 @@ function formatDate(dateString) {
     "NOVEMBER",
     "DECEMBER",
   ];
-
   const date = new Date(dateString);
   const day = days[date.getDay()];
   const month = months[date.getMonth()];
@@ -46,6 +71,7 @@ function formatDate(dateString) {
 
   return `${day}, ${month} ${dateOfMonth}${suffix}, ${year}`;
 }
+
 const Blog = () => {
   const router = useRouter();
   const [blogs, setBlogs] = useState(null);
@@ -69,17 +95,21 @@ const Blog = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="text-yellow-300 bg-gray-800 font-techy h-screen">
-      <div className="p-8 pb-2 ">
+    <div className="text-yellow-300 bg-gray-800 font-techy">
+      <div className="p-10 pb-5">
         <h1 className="mt-0 text-2xl font-bold text-center sm:text-6xl ">
           The Vault
         </h1>
         {blogs.map((blog, index) => (
           <Link key={index} href={`/blogs/${blog._id}`} passHref>
-            <div className="mb-8 cursor-pointer">
-              <h2 className="font-bold tracking-widest uppercase text-md sm:text-2xl hover:text-red-500">
+            <div className="mb-8 cursor-crosshair">
+              <h2 className="font-bold tracking-widest text-red-400 uppercase text-md sm:text-2xl hover:text-gray-500">
                 {blog.title}
               </h2>
+              <p className="text-yellow-400">{blog.description}</p>
+              <p className="inline-flex items-center justify-center px-3 py-1 text-sm text-white bg-yellow-800 rounded-full font-techy">
+                {Taglist[index]}
+              </p>
               <p className="text-gray-400">
                 POSTED ON {formatDate(blog.createdAt)}
               </p>

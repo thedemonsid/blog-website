@@ -4,7 +4,7 @@ import React from "react";
 
 function Vdcdsintro() {
   return (
-    <div className="flex flex-col p-3 bg-gray-700 border-2 border-orange-200 rounded-md shadow-md shadow-gray-300 sm:flex-row">
+    <div className="flex flex-col p-3 bg-gray-700 border-2 border-yellow-200 rounded-md sm:flex-row">
       <Image
         className="mb-2 rounded-3xl sm:mb-0"
         src={vdcdsimg}

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Headingtxt() {
   return (
-    <div className="text-yellow-100 bg-gray-800 ">
+    <div className=" bg-gray-800 ">
       <h1 className="text-2xl sm:text-md font-techy"> hello, devs 👋 </h1>
       <h1 className="text-2xl sm:text-md font-techy"> welcome to this site </h1>
       <h1 className="mb-5 text-2xl sm:text-md font-techy">

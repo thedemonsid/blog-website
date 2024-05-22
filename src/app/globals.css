@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Milonga&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Milonga&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Milonga&family=Space+Grotesk:wght@300..700&display=swap"); 
 @import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&display=swap');
 @tailwind base;
 @tailwind components;
@@ -11,8 +11,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
   
 }
+
+::-webkit-scrollbar {
+  display: none; 
+
+
+}
+
+
+
 
 
 @layer base {
@@ -92,7 +103,8 @@
 vs-title, vs-subtitle {
   display: block;
   text-align: center;
-  margin: 1rem 0;
+  font-family: "Space Grotesk", sans-serif;
+
 }
 
 vs-log, vs-list {
@@ -110,31 +122,37 @@ vs-item {
 /* Heading styles */
 vs-title {
   font-size: 2rem;
-  top: 1.5rem;
+  top: .5rem;
   font-weight: bold;
-  color: rgb(224, 146, 172); /* Redish */
+  position: relative;
+
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgb(2224, 146, 172); /* Redish */
 }
 
 vs-subtitle {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
+  
+  margin-left: 1rem;
   color: #b6d91a; /* Greenish */
 }
 
 /* Paragraph style */
 vs-log {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: rgb(203, 178, 178); 
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Space Grotesk", sans-serif
 }
 
 vs-sidehead{
   font-size: 1.2rem;
   line-height: 1.5;
+  margin-left: 1rem;
   color: #b6d91a; 
-font-family: 'Courier New', Courier, monospace;
+font-family: 'Space Grotesk', sans-serif;
 }
 
 
@@ -155,9 +173,11 @@ ancient-script {
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
+
 }
 vs-code-editor {
-  display: block;
+display: block;
   margin-top: 1rem;
   font-family: 'Courier New', Courier, monospace;
   background-color: #1e1e1e;
@@ -165,6 +185,8 @@ vs-code-editor {
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 vs-code-highlight {
@@ -225,5 +247,44 @@ li{
   list-style: lower-greek;
 }
 
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-jump {
+  animation: jump 1s infinite;
+}
+
+@media (max-width: 768px) {
+  vs-title {
+    font-size: 1.5rem; 
+  }
+  vs-subtitle {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  vs-log {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  vs-sidehead {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  vs-code-editor {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
 
 

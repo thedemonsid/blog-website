@@ -6,7 +6,7 @@ export default withAuth(
     const token = req.nextauth.token;
 
     console.log(pathName, token);
-    const authorizedEmails = ["siddheshshrirame@gmail.com"];
+    const authorizedEmails = ["siddheshshrirame@gmail.com","dumbdevmate@gmail.com"];
 
     if (
       pathName.startsWith("/editor") &&
