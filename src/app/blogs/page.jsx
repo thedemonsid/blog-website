@@ -96,7 +96,7 @@ const Blog = () => {
   }
   return (
     <div className="text-yellow-300 bg-gray-800 font-techy">
-      <div className="p-8 pb-5 ">
+      <div className="p-10 pb-5">
         <h1 className="mt-0 text-2xl font-bold text-center sm:text-6xl ">
           The Vault
         </h1>
