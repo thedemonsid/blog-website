@@ -64,7 +64,7 @@ export default function Nav() {
                   onClick={toggleProfileMenu}
                   className="flex items-center justify-center w-8 h-8 text-white bg-gray-800 rounded-full focus:outline-none"
                   aria-label="User menu">
-                  <div className="scale-150">
+                  <div className="scale-[2]">
                     {" "}
                     <Image
                       src={session.user.image}
