@@ -1,20 +1,31 @@
 "use client";
+import { useSession } from "next-auth/react";
 import React, { useState, useEffect, useRef } from "react";
 
 function Page() {
+  const { data: session } = useSession();
   const [content, setContent] = useState("");
   const [editor, setEditor] = useState("SiddheshShrirame");
   const textareaRef = useRef(null);
 
   const handleSave = () => {
-    const data = JSON.stringify({ content });
-    const blob = new Blob([data], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "content.txt";
-    link.click();
-    URL.revokeObjectURL(url);
+    const data = {
+      title: "Siddhesh",
+      content: editor,
+      description: "Shrirame",
+      author: session.user.id,
+    };
+    fetch("/api/blogs", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   const handleClick = () => {
@@ -61,8 +72,8 @@ function Page() {
     }
   }, [handleKeyDown]);
   return (
-    <div className="relative flex flex-col md:flex-row w-full h-screen text-yellow-300 wrapper font-techy">
-      <div className="relative w-full md:w-1/2 h-1/2 md:h-screen bg-gray-300 border-2 border-yellow-300 editor">
+    <div className="relative flex flex-col md:flex-row w-full h-[90vh] text-yellow-300 wrapper font-techy">
+      <div className="relative w-full md:w-1/2 h-1/2 md:h-[90vh] bg-gray-300 border-2 border-yellow-300 editor">
         <h1 className="absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center">
           Editor
         </h1>
@@ -81,7 +92,7 @@ function Page() {
           Preview
         </button>
       </div>
-      <div className="relative w-full md:w-1/2 h-1/2 md:h-screen overflow-auto bg-gray-800 border-2 border-yellow-300 preview">
+      <div className="relative w-full md:w-1/2 h-1/2 md:h-[90vh] overflow-auto bg-gray-800 border-2 border-yellow-300 preview">
         <h1 className="absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center">
           Preview
         </h1>
