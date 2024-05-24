@@ -1,33 +1,11 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { DialogDemo } from "@/components/DialogDemo";
 import React, { useState, useEffect, useRef } from "react";
 
 function Page() {
-  const { data: session } = useSession();
   const [content, setContent] = useState("");
   const [editor, setEditor] = useState("SiddheshShrirame");
   const textareaRef = useRef(null);
-
-  const handleSave = () => {
-    const data = {
-      title: "Siddhesh",
-      content: editor,
-      description: "Shrirame",
-      author: session.user.id,
-    };
-    fetch("/api/blogs", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-  };
-
   const handleClick = () => {
     setContent(textareaRef.current.value);
   };
@@ -102,12 +80,12 @@ function Page() {
           onClick={displayContent}
         />
       </div>
-      <button
+      <DialogDemo
+        editor={editor}
         className="absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500"
-        onClick={handleSave}
       >
         Save
-      </button>
+      </DialogDemo>
     </div>
   );
 }
