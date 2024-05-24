@@ -80,12 +80,9 @@ function Page() {
           onClick={displayContent}
         />
       </div>
-      <DialogDemo
-        editor={editor}
-        className="absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500"
-      >
-        Save
-      </DialogDemo>
+      <div className="absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500">
+        <DialogDemo editor={editor}>Save</DialogDemo>
+      </div>
     </div>
   );
 }
