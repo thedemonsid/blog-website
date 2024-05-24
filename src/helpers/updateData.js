@@ -34,3 +34,20 @@ export async function updateBlog(id, newdata) {
     console.log(error);
   }
 }
+export async function updateUser(id, newdata) {
+  let config = {
+    method: "post",
+    maxBodyLength: Infinity,
+    url: `/api/user/${id}`,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify(newdata),
+  };
+  try {
+    const response = await axios.request(config);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
+  }
+}
