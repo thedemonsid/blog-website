@@ -91,7 +91,6 @@ const blogSchema = new mongoose.Schema(
       ],
       default: [],
     },
-
     number_of_clicks: {
       type: Number,
       default: 0,
@@ -99,6 +98,10 @@ const blogSchema = new mongoose.Schema(
     number_of_likes: {
       type: Number,
       default: 0,
+    },
+    tags: {
+      type: [String],
+      default: [],
     },
   },
   { timestamps: true }
@@ -112,4 +115,3 @@ try {
 }
 
 export { User, Blog, Comment };
-
