@@ -21,7 +21,9 @@
 
 
 }
-
+textarea{
+  resize: none;
+}
 
 
 
@@ -125,7 +127,6 @@ vs-title {
   top: .5rem;
   font-weight: bold;
   position: relative;
-
   font-family: 'Space Grotesk', sans-serif;
   color: rgb(2224, 146, 172); /* Redish */
 }
@@ -285,6 +286,55 @@ li{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+}
+@layer utilities{
+  /* Utility classes */
+ .themed-yellow{
+  background-color: rgb(253 224 71) !important;
+
+ }
+ .themed-gray{
+  background-color: rgb(31 41 55)!important;
+  color: #fae62e!important;
+ }
+ .themed-border{
+  border-color: rgb(253 224 71)!important;
+ }
+ .themed-color{
+  color: rgb(253 224 71)!important;
+ }
+ .themed-background{
+  background-color: rgb(31,41,55)!important;
+ }
+ .themed-color-2{
+  color:#f44747 !important;
+ }
+ .focused-border{
+  border-color: rgb(255, 84, 84)!important;
+  box-shadow: 0 0 0 2px rgb(255, 84, 84)!important;
+ }
+.themed-border-2{
+  border-color: rgb(255, 84, 84)!important;
+  border-width: 1.5px;
+ 
+}
+ /* In your CSS or a CSS module */
+@keyframes pop-up {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-up {
+  animation: pop-up 0.5s ease-out;
+}
+
+ 
 }
 
 

@@ -19,6 +19,7 @@ export function DialogDemo({ editor }) {
   const { data: session } = useSession();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [open, setOpen] = useState(false); 
   const handleSave = () => {
     const userId = session.user.id;
     const blogData = {
@@ -30,48 +31,53 @@ export function DialogDemo({ editor }) {
 
     createBlog(blogData).then((createdBlog) => {
       updateUser(userId, { $push: { blogsWritten: createdBlog?.newBlog?._id } });
+      setOpen(false);
     });
   };
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">Save the Blog</Button>
+      <button
+  className="px-4 py-2 text-base text-red-500 bg-yellow-300 rounded-md shadow-sm font-techy hover:bg-slate-400"
+>
+  Save and publish
+</button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] themed-gray themed-border">
         <DialogHeader>
-          <DialogTitle>Brief</DialogTitle>
-          <DialogDescription>
-            Please fill in the details to save the blog.
+          <DialogTitle>Conformation</DialogTitle>
+          <DialogDescription className="themed-color-2">
+           Before you save, can you tell us a lil-bit about blog ?
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+          <div className="grid items-center grid-cols-4 gap-4">
             <Label htmlFor="Title" className="text-right">
               Title
             </Label>
             <Input
               id="title"
               defaultValue="Pedro Duarte"
-              className="col-span-3"
+              className="col-span-3 themed-background themed-border focus:focused-border"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
+          <div className="grid items-center grid-cols-4 gap-4">
             <Label htmlFor="description" className="text-right">
               Description
             </Label>
             <Input
               id="description"
               defaultValue="@peduarte"
-              className="col-span-3"
+              className="col-span-3 themed-background themed-border focus:focused-border"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit" onClick={handleSave}>
+          <Button className="themed-color" type="submit" onClick={handleSave}>
             Save changes
           </Button>
         </DialogFooter>

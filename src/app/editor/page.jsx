@@ -52,26 +52,26 @@ function Page() {
   return (
     <div className="relative flex flex-col md:flex-row w-full h-[90vh] text-yellow-300 wrapper font-techy">
       <div className="relative w-full md:w-1/2 h-1/2 md:h-[90vh] bg-gray-300 border-2 border-yellow-300 editor">
-        <h1 className="absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center">
+        <h1 className="absolute top-0 left-0 w-full mt-3 text-3xl text-center font-techy">
           Editor
         </h1>
         <textarea
           ref={textareaRef}
-          className="w-full h-full overflow-auto bg-gray-700 px-4 py-12"
+          className="w-full h-full px-4 py-12 overflow-auto bg-gray-700"
           value={editor}
           onChange={(e) => {
             setEditor(e.target.value);
           }}
         ></textarea>
         <button
-          className="absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500"
+          className="absolute w-32 font-mono text-2xl text-red-500 bg-yellow-300 rounded-sm shadow-md bottom-2 right-2 hover:bg-slate-400"
           onClick={handleClick}
         >
           Preview
         </button>
       </div>
       <div className="relative w-full md:w-1/2 h-1/2 md:h-[90vh] overflow-auto bg-gray-800 border-2 border-yellow-300 preview">
-        <h1 className="absolute top-0 left-0 w-full mt-3 font-techy text-3xl text-center">
+        <h1 className="absolute top-0 left-0 w-full mt-3 text-3xl text-center font-techy">
           Preview
         </h1>
         <div
@@ -80,7 +80,7 @@ function Page() {
           onClick={displayContent}
         />
       </div>
-      <div className="absolute bottom-2 right-2 font-mono text-2xl shadow-md rounded-sm w-32 hover:bg-slate-400 bg-yellow-300 text-red-500">
+      <div className="absolute w-32 font-mono text-2xl text-red-500 bg-yellow-300 border-yellow-400 rounded-sm shadow-md bottom-2 right-2">
         <DialogDemo editor={editor}>Save</DialogDemo>
       </div>
     </div>

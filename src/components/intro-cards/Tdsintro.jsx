@@ -4,7 +4,7 @@ import Image from 'next/image';
 function Tdsintro() {
   return (
     <div>
-    <div className="flex flex-col p-3 bg-gray-700 border-2 border-yellow-200 rounded-md  sm:flex-row">
+    <div className="flex flex-col p-3 bg-gray-700 border-2 border-yellow-200 rounded-md sm:flex-row">
     <Image
       className="mb-2 rounded-3xl sm:mb-0"
       src={thedemonsidimg}
@@ -25,7 +25,3 @@ function Tdsintro() {
 }
 
 export default Tdsintro
-// muze ise ek glorified readme.md banana hai
-// OG theme vesa sa tha ....
-// some animations ??
-// bol 
