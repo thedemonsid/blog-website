@@ -3,7 +3,7 @@ import React from "react";
 
 const Denied = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-screen text-red-600 bg-gray-800 font-cool">
+    <div className="relative flex flex-col items-center justify-center w-full h-screen text-white bg-gray-800 font-cool">
       <h1 className="mb-6 text-xl sm:text-6xl animate-pop-up">Whoops!</h1>
       <div className="w-11/12 p-6 mb-6 ml-2 border-2 border-yellow-300 rounded-md sm:w-1/2 pop-up animate-pop-up font-techy">
         <ul className="text-left text-white">
